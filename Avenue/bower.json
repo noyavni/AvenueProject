@@ -1,0 +1,20 @@
+{
+  "name": "desktop-app",
+  "version": "1.0.0",
+  "main": "app/index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "angular-translate": "~2.13.0",
+    "angular": "~1.5.8",
+    "angular-ui-router": "~0.3.2",
+    "bootstrap": "~3.3.7",
+    "jquery": "~3.1.1",
+    "underscore": "~1.8.3",
+    "angular-translate-loader-partial": "~2.13.0"
+  }
+}

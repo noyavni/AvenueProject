@@ -1,0 +1,26 @@
+﻿{
+  "a-user-privacy": {
+		"myaccount": "MY ACCOUNT",
+		"userDetails": "User Details",
+		"name": "Name",
+		"email": "Email",
+		"birthDate": "Date Of Birth",
+		"deliveryTo": { "title": "Delivary Address", 
+						"name": "Street", 
+						"number": "Street Number",
+						"city": "City",
+						"postcode": "Post Code"},
+		"phone": "Phone",
+		"myorders": "MY ORDERS",
+		"ID": "Order Number",
+		"date": "Date",
+		"totalprice": "Total Price",
+		"status": "Status",
+		"item": "Item",
+		"itemName": "Name",
+		"quantity": "Quantity",
+		"color": "Color",
+		"size": "Size",
+		"price": "Price"
+  }
+}

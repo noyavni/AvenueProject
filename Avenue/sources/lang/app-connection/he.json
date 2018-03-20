@@ -1,0 +1,37 @@
+﻿{
+	"a-connection":
+	{
+		 "a-login": {
+			"email": "Email",
+			"pass": "סיסמא",
+			"signIn": "התחבר",
+			"remember": "זכור אותי",
+			"createAccount": "צור חשבון חדש"
+		}
+
+		  "a-register": {
+			"signUp": "הרשם",
+			"email": "Email",
+			"enterYourEmail": "Enter your Email",
+			"mailSecurityMsg": "כתובת המייל משמשת לאבטחת חשבונך",
+			"setPass": "סיסמא",
+			"confirmPass": "אישור סיסמא",
+			"fname": "שם פרטי",
+			"lname": "שם משפחה",
+			"birthdate": "תאריך לידה",
+			"date": "יום",
+			"month": "חודש",
+			"year": "שנה",
+			"gender": "מין",
+			"male": "זכר",
+			"female": "נקבה",
+			"comtaceNo": "מספר טלפון",
+			"secondContactNo": "מספר נוסף",
+			"ifAny": "(אם קיים)",
+			"note": "הערות:",
+			"terms": "בלחיצה על הרשם אתה מסכים לתנאי השירות ומאשר שקראת את מדיניות החברה"
+
+		  }
+	}
+}
+ 

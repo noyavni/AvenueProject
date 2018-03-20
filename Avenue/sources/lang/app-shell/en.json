@@ -1,0 +1,16 @@
+﻿{
+	"a-shell":
+	{	
+		"mainTitle" : "AVENUE",
+		"new": "Home",
+		"hello": "Hello",
+		"collection": "Collection",
+		"info": "Info",
+    "addProd": "Add Product",
+    "orders":  "Orders",
+		"review": "Review",
+		"login": "Login",
+		"register": "Register",
+		"logOut": "Log Out"
+	}
+}

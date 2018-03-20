@@ -1,0 +1,7 @@
+﻿{
+	"a-errors":
+	{	
+	  "general_error;*": "general error",			
+      "invalid_request;": "server error"
+	}
+}

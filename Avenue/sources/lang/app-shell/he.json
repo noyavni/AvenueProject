@@ -1,0 +1,13 @@
+﻿{
+	"a-shell":
+	{	
+		"mainTitle" : "AVENUE",
+		"new": "חדש",
+		"collection": "קולקציה",
+		"vote": "VOTE",
+		"sale": "Sale",
+		"review": "ביקורות",
+		"login": "התחבר",
+		"register": "הרשם"
+	}
+}

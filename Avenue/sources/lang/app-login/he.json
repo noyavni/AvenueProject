@@ -1,0 +1,9 @@
+﻿{
+  "a-login": {
+  		"email": "Email",
+		"pass": "סיסמא",
+		"signIn": "הכנס",
+		"remember": "זכור אותי",
+		"createAccount": "צור חשבון"
+  }
+}

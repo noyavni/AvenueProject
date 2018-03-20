@@ -1,0 +1,9 @@
+﻿{
+	"a-login": {
+		"email": "Email",
+		"pass": "Password",
+		"signIn": "Sign in",
+		"remember": "Remember me",
+		"createAccount": "Create an account"
+	}
+}

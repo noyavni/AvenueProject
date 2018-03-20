@@ -1,0 +1,5 @@
+﻿{
+  "a-home": {
+	"hello": "Hello {{name}}"
+  }
+}

@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <title> A V E N U E </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" 
+      type="image/png" 
+      href="">
+   
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link href="../bower_components/Material/angular-material-1.1.0.css" rel="stylesheet" />
+    <link href="assets/css/app.css" rel="stylesheet" />
+    <link href="../node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.css" rel="stylesheet" />
+    <link href="../node_modules/angular-ui-carousel/dist/ui-carousel.css" rel="stylesheet" />
+    <link href="../node_modules/angular-ui-carousel/dist/ui-carousel.min.css" rel="stylesheet" />
+    <link href="../node_modules/angular-ui-bootstrap/src/carousel/carousel.css" rel="stylesheet" />
+   
+</head>
+
+<body><!--ng-app="appModule"-->
+    <div class="container-fluid">
+        <div ui-view></div>
+    </div>
+
+    <!-- JS from Bower Components -->
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../bower_components/underscore/underscore-min.js"></script>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="../bower_components/angular-translate/angular-translate.min.js"></script>
+    <script src="../bower_components/angular-translate-loader-partial/angular-translate-loader-partial.min.js"></script>
+    <script src="../bower_components/Material/angular-material.min-1.1.0.js"></script>
+    <script src="../bower_components/Material/angular-animate-1.6.4.js"></script>
+    <script src="../bower_components/Material/angular-aria.min-1.5.5.js"></script>
+    <script src="../bower_components/Material/angular-messages.min-1.5.5.js"></script>
+    <script src="../node_modules/ng-file-upload/dist/ng-file-upload-shim.min.js"></script>
+    <script src="../node_modules/ng-file-upload/dist/ng-file-upload.min.js"></script>
+    <script src="../node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
+    <script src="../node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+    <script src="../node_modules/angular-ui-carousel/dist/ui-carousel.js"></script>
+    <script src="../node_modules/angular-ui-carousel/dist/ui-carousel.min.js"></script>
+    <script src="../node_modules/angular-ui-bootstrap/src/carousel/carousel.js"></script>
+    <script src="../node_modules/angular-ui-bootstrap/src/carousel/index-nocss.js"></script>
+    <script src="../node_modules/angular-ui-bootstrap/src/carousel/index.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular-cookies.min.js"></script>
+    <script src="../node_modules/angular-local-storage/src/angular-local-storage.js"></script>
+
+     <!-- app general -->
+    <script src="app.module.js"></script>
+    <script src="app.config.js"></script>
+    <script src="app.run.js"></script>
+    <script src="app-bootstrap.js"></script>
+
+    <!-- desktop components -->
+
+    <!-- shell -->
+    <script src="app-shell/app-shell.module.js"></script>
+    <script src="app-shell/app-shell.config.js"></script>
+    <script src="app-shell/app-shell.run.js"></script>
+    <script src="app-shell/controllers/app-shell.controller.js" type="text/javascript"></script>
+    <script src="app-shell/services/app-shell.service.js"></script>
+
+   
+
+    <!--Home-->
+    <script src="app-home/app-home.module.js"></script>
+    <script src="app-home/app-home.config.js"></script>
+    <script src="app-home/app-home.run.js"></script>
+    <script src="app-home/controllers/app-home.controller.js" type="text/javascript"></script> 
+   
+    <!--Login-->
+    <script src="app-login/app-connection.module.js"></script>
+    <script src="app-login/app-connection.config.js"></script>
+    <script src="app-login/app-connection.run.js"></script>
+    <script src="app-login/controllers/app-login.controller.js"></script>
+    <script src="app-login/services/app-login.service.js"></script>
+
+    <!--Register-->
+    <script src="app-register/app-connection.module.js"></script>
+    <script src="app-register/app-connection.config.js"></script>
+    <script src="app-register/app-connection.run.js"></script>
+    <script src="app-register/controllers/app-register.controller.js"></script>
+    <script src="app-register/services/app-register.service.js"></script>
+
+    <!--Info-->
+    <script src="app-info/app-info.module.js"></script>
+    <script src="app-info/app-info.config.js"></script>
+    <script src="app-info/app-info.run.js"></script>
+    <script src="app-info/controllers/app-info.controller.js"></script>
+
+    <!--User Privacy-->
+    <script src="app-user-privacy/app-user-privacy.module.js"></script>
+    <script src="app-user-privacy/app-user-privacy.config.js"></script>
+    <script src="app-user-privacy/app-user-privacy.run.js"></script>
+    <script src="app-user-privacy/controllers/user-cart.controller.js"></script>
+    <script src="app-user-privacy/controllers/user-favorites.controller.js"></script>
+    <script src="app-user-privacy/controllers/user-properties.controller.js"></script>
+    <script src="app-user-privacy/services/app-user-privacy.service.js"></script>
+
+    <!--Collection-->
+    <script src="app-collection/app-collection.module.js"></script>
+    <script src="app-collection/app-collection.config.js"></script>
+    <script src="app-collection/app-collection.run.js"></script>
+    <script src="app-collection/controllers/app-collection.controller.js"></script>
+    <script src="app-collection/controllers/app-collection-add.controller.js"></script>
+    <script src="app-collection/services/app-collection.service.js"></script>
+
+    <!--Review-->
+    <script src="app-review/app-review.module.js"></script>
+    <script src="app-review/app-review.config.js"></script>
+    <script src="app-review/app-review.run.js"></script>
+    <script src="app-review/controllers/app-review.controller.js"></script>
+    <script src="app-review/controllers/app-addReview.controller.js"></script>
+    <script src="app-review/services/app-review.service.js"></script>
+    <script src="app-review/services/app-addReview.service.js"></script>
+
+    <!--Add Product-->
+    <script src="app-addproduct/app-addproduct.module.js"></script>
+    <script src="app-addproduct/app-addproduct.config.js"></script>
+    <script src="app-addproduct/app-addproduct.run.js"></script>
+    <script src="app-addproduct/controllers/app-addproduct.controller.js"></script>
+    <script src="app-addproduct/services/app-addproduct.service.js"></script>
+    <script src="app-addproduct/directive/app-addproduct.directive.js"></script>
+    <!-- End desktop components -->
+
+    <!--Add P-->
+    <script src="app-addp/app-addp.module.js"></script>
+    <script src="app-addp/app-addp.config.js"></script>
+    <script src="app-addp/app-addp.run.js"></script>
+    <script src="app-addp/controllers/app-addp.controller.js"></script>
+    <script src="app-addp/services/app-addp.service.js"></script>
+    <script src="app-addp/directive/app-addp.directive.js"></script>
+    <!-- End desktop components -->
+
+    <!--Store-->
+    <script src="app-store/app-store.module.js"></script>
+    <script src="app-store/app-store.config.js"></script>
+    <script src="app-store/app-store.run.js"></script>
+    <script src="app-store/controllers/app-store.controller.js"></script>
+    <script src="app-store/services/app-store.service.js"></script>
+    <!-- End desktop components -->
+
+    <!--Orders-->
+    <script src="app-orders/app-orders.module.js"></script>
+    <script src="app-orders/app-orders.config.js"></script>
+    <script src="app-orders/app-orders.run.js"></script>
+    <script src="app-orders/controllers/app-orders.controller.js"></script>
+    <script src="app-orders/services/app-orders.service.js"></script>
+    <!-- End desktop components -->
+
+</body>
+
+</html>

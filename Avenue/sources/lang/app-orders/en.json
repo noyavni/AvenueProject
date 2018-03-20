@@ -1,0 +1,19 @@
+﻿{
+	"a-orders":
+	{
+		"myorders": "MY ORDERS",
+    "ID": "Order Number",
+    "username":  "UserName",
+		"date": "Date",
+		"totalprice": "Total Price",
+		"status": "Status",
+		"item": "Item",
+    "itemName": "Name",
+    "designer":  "Designer",
+		"quantity": "Quantity",
+		"color": "Color",
+		"size": "Size",
+		"price": "Price"
+	
+	}
+}

@@ -1,0 +1,35 @@
+﻿{
+	"a-connection":
+	{
+		"a-login": {
+			"email": "Email",
+			"pass": "Password",
+			"signIn": "Sign in",
+			"remember": "Remember me",
+			"createAccount": "Create an account"
+		}
+
+		"a-register": {
+			"signUp": "Sign Up",
+			"email": "Email",
+			"enterYourEmail": "Enter your Email",
+			"mailSecurityMsg": "Your Email Id is being used for ensuring the security of your account authorization and access recovery.",
+			"setPass": "Set Password",
+			"confirmPass": "Confirm Password",
+			"fname": "First Name",
+			"lname": "LastName",
+			"birthdate": "Date of Birth",
+			"date": "Date",
+			"month": "Month",
+			"year": "Year",
+			"gender": "Gender",
+			"male": "Male",
+			"female": "Female",
+			"comtaceNo": "Contact No.",
+			"secondContactNo": "lternate No.",
+			"ifAny": "(if any)",
+			"note": "Note:",
+			"terms": "By clicking Sign Up you agree to our Terms and that you have read our Policy"
+		}
+	}
+}

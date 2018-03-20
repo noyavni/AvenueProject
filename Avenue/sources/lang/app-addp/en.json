@@ -1,0 +1,14 @@
+﻿{
+	"a-addp":
+	{
+		"pics": "Pictures",
+		"price": "Price",
+		"pShape": "Product Shape",
+		"pName": "Product Name",
+		"cat": "Category",
+		"designer": "Designers",
+		"next": "Upload"
+
+	
+	}
+}

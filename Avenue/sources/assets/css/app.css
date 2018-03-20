@@ -1,0 +1,249 @@
+﻿
+@font-face {
+  font-family: 'Glyphicons Halflings';
+}
+
+body 
+{
+     direction: ltr;
+}
+
+/* app-shell  */
+
+.app-shell .content-header {
+  height: 65px;
+  line-height: 65px;
+}
+
+.app-shell .content-header .mainTitle {
+  color: #6f94b3;
+  font-size: 1.6em;
+}
+.app-shell .content-header .glyphicon 
+{
+    margin-right:5px;
+}
+
+.app-shell .designersList
+{
+    color: white;
+}
+
+.navBarTextStyle
+{
+    color: black; 
+    font-family: Arial Black;
+}
+
+.app-shell .rights
+{
+   text-align: center;
+}
+
+#footer
+{
+   background-color:black;
+   color: white;
+   border-bottom: 1px solid gray;
+   font-family: "Arial Black", Gadget, sans-serif;
+}
+
+
+
+/* app-home */
+.app-home .row 
+{
+    margin-bottom:20px;
+    font-size: 1.4em;
+}
+
+
+/* app-user-privacy */
+.app-user-privacy .a-underline
+{
+   border-bottom: 1px solid gray;
+   font-family: "Arial Black", Gadget, sans-serif;
+   font-size:x-large;
+
+}
+
+.app-user-privacy .primaryHeadline
+{
+  border-bottom: 1px solid gray;
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-size:large;
+}
+
+.app-user-privacy .inTbl
+{
+  border-bottom: 1px solid gray;
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-size: medium;
+  background-color: lightgray;
+  border-color: white;
+  text-align:center;
+}
+
+
+.app-user-privacy .detailTbl
+{
+   border-bottom: 1px solid gray;
+   font-family: "Arial", Gadget, sans-serif;
+   font-size: small;
+   background-color: lightgray;
+   border-color: white;
+   text-align:center;
+
+}
+
+.app-user-privacy .bold
+{
+    font-weight: bold;
+}
+
+/* app-collection */
+
+.app-collection .categories
+{
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: x-large;
+    width: 350px;
+    height: 350px;
+    text-align: center;
+    border: 50px solid white;
+    border: 0;
+    padding: 0;
+    margin-right:15px;
+
+}
+    .app-collection .categories img {
+        opacity:0.6;
+        width: 350px;
+        height: 350px;
+    }
+    .app-collection .categories md-card-actions {
+        margin-top: -60px;
+    }
+     .app-collection .categories md-card-actions span {
+        font-size: 2em;
+    }
+    
+/* app-review */
+
+.app-review .revList
+{
+    background-color: darkgray;
+    padding: 4px 4px 4px 4px;
+    border-radius: 5px;
+}
+
+.app-review .name
+{
+   font-family: "Arial Black", Gadget, sans-serif;
+   font-size: small;
+
+}
+
+.app-review .revInf
+{
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: medium;
+
+}
+
+.app-review .star
+{
+    color: gold;
+    font-size: large;
+}
+
+.app-review .rev
+{
+    background-color: #DCDCDC;
+    /*font-family: "Arial Black", Gadget, sans-serif;*/
+
+
+}
+
+/* app-addproduct */ 
+
+
+.app-addproduct .lbl
+{
+    background-color:black;
+    font-size: medium;
+}
+.app-addproduct .file {
+ font-size: 1.25em;
+    font-weight: 700;
+    display: inline-block;
+}
+
+
+/* app-store */
+.app-store #popupContainer {
+  position: relative; 
+}
+
+.app-store .image {
+    border: 0;
+    padding: 0;
+    width: 400px;
+}
+
+#slides_control {
+    position: absolute;
+    width: 400px;
+    left: 50%;
+    top: 20px;
+    margin-left: -200px;
+}
+
+.app-store .circleIcon{
+    position: absolute;
+    right: 20px;
+    bottom: 16px;
+}
+
+/*app-orders*/
+.app-orders .inTbl
+{
+  border-bottom: 1px solid gray;
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-size: medium;
+  background-color: lightgray;
+  border-color: white;
+  text-align:center;
+}
+
+
+.app-orders .detailTbl
+{
+   border-bottom: 1px solid gray;
+   font-family: "Arial", Gadget, sans-serif;
+   font-size: small;
+   background-color: lightgray;
+   border-color: white;
+   text-align:center;
+
+}
+
+.app-orders .bold
+{
+    font-weight: bold;
+}
+
+/* app-messages items+item  */
+    .app-messages.app-messages-items .text-elipsis {
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+	
+	.app-messages.app-messages-items .itemUnread 
+	{
+	    background: #f8fbf4;
+	}
+/* app-messages items+item  */
+
+

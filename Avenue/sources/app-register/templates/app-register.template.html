@@ -1,0 +1,122 @@
+﻿<div class="app-register text-center" ng-controller="appRegisterController as vm">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-10">
+                <h1 class="entry-title"><span>{{::'a-register.signUp' | translate }}</span> </h1>
+                <hr>
+                <form class="form-horizontal" method="post" name="signup" id="signup" enctype="multipart/form-data">
+
+                    <!--Email-->
+                    <div class="form-group row">
+                        <label class="control-label col-sm-3">{{ 'a-register.email' | translate }}<span class="text-danger">*</span></label>
+                        <div class="col-md-8 col-sm-9">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                <input type="email" ng-model="vm.userObj.email" ng-pattern="word" class="form-control" name="emailid" id="emailid" placeholder="Enter your Email" value="">
+                            </div>
+                            <small> {{ 'a-register.mailSecurityMsg' | translate }} </small>
+                        </div>
+                    </div>
+
+                    <!--Password-->
+                    <div class="form-group row">
+                        <label class="control-label col-sm-3">{{'a-register.setPass' | translate}} <span class="text-danger">*</span></label>
+                        <div class="col-md-5 col-sm-8">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                <input type="password" ng-model="vm.userObj.pass" ng-pattern="wordToPass" class="form-control" name="password" id="password" placeholder="Choose password (at least 8 chars)" value="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Confirm Password-->
+                    <div class="form-group row">
+                        <label class="control-label col-sm-3">{{'a-register.confirmPass' | translate}} <span class="text-danger">*</span></label>
+                        <div class="col-md-5 col-sm-8">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                <input type="password" ng-model="vm.userObj.confirmPass" class="form-control" name="cpassword" id="cpassword" placeholder="Confirm your password" value="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--First Name-->
+                    <div class="form-group row">
+                        <label class="control-label col-sm-3">{{'a-register.fname' | translate}} <span class="text-danger">*</span></label>
+                        <div class="col-md-8 col-sm-9">
+                            <input type="text" ng-model="vm.userObj.fName" class="form-control" name="mem_name" placeholder="Enter your Name here" value="">
+                        </div>
+                    </div>
+
+                    <!--Last Name-->
+                    <div class="form-group row">
+                        <label class="control-label col-sm-3">{{'a-register.lname' | translate}} </label>
+                        <div class="col-md-8 col-sm-9">
+                            <input type="text" ng-model="vm.userObj.lName" class="form-control" name="mem_name" placeholder="Enter your Name here" value="">
+                        </div>
+                    </div>
+                    
+                    <!--Contact Number-->
+                    <div class="form-group row">
+                        <label class="control-label col-sm-3">{{'a-register.contactNo' | translate}} <span class="text-danger">*</span></label>
+                        <div class="col-md-5 col-sm-8">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                                <input type="text" ng-model="vm.userObj.phone" class="form-control" name="contactnum" id="contactnum" placeholder="Enter your Primary contact no." value="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Address -->
+                    <div class="form-group row">
+                        <label class="control-label col-sm-3">
+                            {{'a-register.address' | translate}}
+                        </label>
+
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" name="contactnum2" placeholder="{{'a-register.city' | translate}}" ng-model="vm.userObj.city" value="">
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" name="contactnum2" placeholder="{{'a-register.street' | translate}}" ng-model="vm.userObj.street" value="">
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" name="contactnum2" placeholder="{{'a-register.postcose' | translate}}" ng-model="vm.userObj.postcode" value="">
+                        </div>
+                      
+
+                    </div>
+
+                    <!-- Body Shape Claculator -->
+                    <div class="form-group row">
+                        <label class="control-label col-sm-3">
+                            {{'a-register.calc' | translate}}
+                        </label>
+
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" name="contactnum2" placeholder="{{'a-register.chest' | translate}}" ng-model="vm.userObj.bust" value="">
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" name="contactnum2" placeholder="{{'a-register.waist' | translate}}" ng-model="vm.userObj.waist" value="">
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" name="contactnum2" placeholder="{{'a-register.hips' | translate}}" ng-model="vm.userObj.hips" value="">
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" name="contactnum2" placeholder="{{'a-register.shoulders' | translate}}" ng-model="vm.userObj.shoulders" value="">
+                        </div>
+                        
+                    </div>
+
+                    <!--Sign Up Btn-->
+                    <div class="form-group row">
+                        <div class="col-xs-offset-3 col-xs-10">
+                            <input type="button" ng-click="vm.addUser($event)" value="{{'a-register.signUp' | translate}}" class="btn btn-primary">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+

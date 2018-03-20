@@ -1,0 +1,12 @@
+﻿<div class="app-review" ng-controller="appAddReviewController as vm">
+    <div class="row">
+
+        <div class="star">
+            <div ng-repeat="n in vm.getStarArray()" ng-class="vm.getClass(n)" ng-mouseover="vm.setClass($event,n)"> </div>
+        </div>
+
+        <textarea class="form-control" id="exampleTextarea" placeholder="{{'a-review.addRevInfo' | translate}}" rows="5" ng-model="vm.revObj.rev"></textarea>
+        <input type="button" ng-click="vm.backToRevs($event)" value="{{ 'a-review.submit' | translate }}" class="btn btn-primary" />
+
+    </div>
+</div>

@@ -1,0 +1,113 @@
+﻿<div ng-cloak class="app-user-privacy" ng-app="app-user-privacy" ng-controller="cartController as vm">
+    <div layout-padding style="color:black">
+        <div>
+            <span class="fcart">Your Shopping Cart :</span>
+        </div>
+        <md-divider></md-divider>
+        <br /><br />
+        <div class="fcart row">
+            <span class="col-sm-2">Image</span>
+            <span class="col-sm-2">Product Name</span>
+            <span class="col-sm-2">Price</span>
+            <span class="col-sm-2">Match</span>
+            <span class="col-sm-2">Remove Item</span>
+        </div>
+        <md-divider></md-divider>
+        <br />
+
+        <div layout-padding class="fcart row" ng-repeat="t in vm.Cart">
+            <div>
+                <span class="col-sm-2">
+                    <img src="{{t.image[0]}}" style="width:100px; height:120px">
+                </span>
+                <md-divider></md-divider><br /><br /><br />
+                <span class="col-sm-2">
+                    {{t.prodName}}
+                </span>
+                <span class="col-sm-2">
+                    {{t.price}} $
+                </span>
+                <span class="col-sm-2">
+                    <md-icon md-svg-icon="{{t.match}}"></md-icon>
+                </span>
+                <span class="col-sm-2">                    
+                    <md-button class="md-icon-button" ng-click="deleteItem($index)">
+                        <md-icon md-svg-icon="./assets/img/ic_delete_black_48px.svg"></md-icon>
+                    </md-button>                   
+                </span>
+            </div>
+            <br />
+            
+        </div>
+        <md-divider></md-divider>
+        <div class="fcart">
+            <span class="row" ng-init="calcTotal()">
+                Price : {{Price}} $ 
+            </span>
+            <span class="row">
+                Shipment : {{shipment}} $
+            </span>
+            <span class="row">
+                Total price : {{totalPrice}} $
+            </span><br />
+            <input type="button" ng-click="pay()" ng-if="bshow" class="btn btn-primary" value="Continue with payment">
+            <!--<md-button ng-click="pay()" ng-if="bshow" style="background-color:lightgrey">Continue with payment</md-button>-->
+        </div>
+        <div class="fcart row" ng-if="showPay" ng-init="showPay=false">
+            <div class="col-sm-5">
+                <div class="col-sm-7 input-group">
+                    <span class="lbl label label-default">Credit Card number:</span>
+                    <input type="number" class="form-control" ng-model="vm.creditNumber"  maxlength="16" minlength="16" required ng-pattern="/^[0-9]{16}$/">
+                </div><br />
+                <div class="col-sm-7 input-group">
+                    <span class="lbl label label-default">Expiration date:</span>
+                    <input type="month" class="form-control" ng-model="vm.exDate">
+                </div><br />
+                <div class="col-sm-7 input-group">
+                    <span class="lbl label label-default">Credit card owner: </span>
+                    <input type="text" class="form-control" ng-model="vm.owner" >
+                </div><br />
+                <div class="col-sm-7 input-group">
+                    <span class="lbl label label-default">CVV</span>
+                    <input type="number" class="form-control" ng-model="vm.cvv"  minlength="3" maxlength="3" required ng-pattern="/^[0-9]{3}$/">
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <div class="col-sm-7 input-group" ng-init="check = true">
+                    <span class="lbl label label-default">Street:</span>                    
+                    <input type="text" class="form-control" ng-model="vm.street" value="{{vm.userDetails.Street}}" required ng-disabled="check">
+                </div><br />
+                <div class="col-sm-7 input-group">
+                    <span class="lbl label label-default">City:</span>
+                    <input type="text" class="form-control" ng-model="vm.city" value="{{vm.userDetails.City}}" required ng-disabled="check">
+                </div><br />
+                <div class="col-sm-7 input-group">
+                    <span class="lbl label label-default">Postal code:</span>
+                    <input type="number" class="form-control" ng-model="vm.postcode" value="{{vm.userDetails.PostCode}}" ng-disabled="check">
+                </div><br />
+                <div class="col-sm-7 input-group">
+                    <span class="lbl label label-default">Tel: </span>
+                    <input type="number" class="form-control" ng-model="vm.tel" required minlength="10" maxlength="10" value="{{vm.userDetails.Phone}}" ng-disabled="check">
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <md-button style="background-color:lightgrey" ng-click="check = false">edit</md-button>
+            </div>
+            <div class="col-sm-2" style="height:400px">
+                <md-button style="background-color:lightgrey;top:78%" ng-click="confirmPay($event)"><b>Confirm</b></md-button>
+            </div>
+        </div>  
+</div>
+</div>
+
+<style>
+    .lbl {
+        font-size:100%;
+        font-weight:500;
+    }
+    .fcart
+    {
+     font-weight:bold;
+     font-size:20px;   
+    }
+</style>

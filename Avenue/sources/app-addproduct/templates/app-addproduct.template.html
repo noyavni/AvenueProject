@@ -1,0 +1,93 @@
+﻿<div class="app-addproduct" ng-controller="appAddProductController as vm">
+
+    <div class="row">   
+        <div class="col-sm-5">
+            <div class="col-sm-4 input-group">
+                <span class="lbl label label-default">Pictures</span><br />
+                <button type="file" ngf-select="vm.uploadFiles($file, $invalidFiles)"
+                        accept="image/*" ngf-max-height="1000" ngf-max-size="1MB">
+                    Select File
+                </button>
+
+                File:
+                <div style="font:smaller">
+                    {{vm.f.name}} {{vm.errFile.name}} {{vm.errFile.$error}} {{vm.errFile.$errorParam}}
+                    <span class="progress" ng-show="vm.f.progress >= 0">
+                        <div style="width:{{vm.f.progress}}%"
+                             ng-bind="f.progress + '%'"></div>
+                    </span>
+                </div>
+                {{vm.errorMsg}}  
+                <!--<input type="file" class="file" onchange="angular.element(this).scope().getTheFiles(this.files)" multiple accept=".jpeg,.png,.jpg,.bmp"/>-->
+            </div>
+            <br />
+            <!--<div>
+                <img ng-src="" />
+
+            </div>
+            <br />-->
+            <div class="col-sm-4 input-group">
+                <span class="lbl label label-default">Price</span>
+                <input type="text" class="form-control" id="price" ng-model="vm.Price">
+            </div>
+            <br />
+            <div class="col-sm-4 input-group">
+                <span class="lbl label label-default">Category</span>
+                <select class="form-control" id="sel2" ng-model="vm.ProductType">
+                    <option ng-repeat="t in vm.list">{{t}}</option>
+                </select>
+            </div>
+            <br />
+            <div class="col-sm-4 input-group">
+                <span class="lbl label label-default">Product Name</span>
+                <input type="text" class="form-control" id="prdname" ng-model="vm.ProductName">
+            </div>
+            <br />
+            <div class="col-sm-4 input-group">
+                <span class="lbl label label-default">Product Shape</span>
+                <select class="form-control" id="sel1" ng-model="vm.ProductShape">
+                    <option ng-repeat="s in vm.list2">{{s}}</option>                  
+                   </select>
+</div>
+        </div>
+        <!--<div class="col-sm-5 sm-push-6">
+            <div class="col-sm-4 input-group">
+                <span class="lbl label label-default">XL</span>
+                <input type="text" class="form-control" id="xl" ng-model="xlAmount">
+            </div><br />
+            <div class="col-sm-4 input-group">
+                <span class="lbl label label-default">L</span>
+                <input type="text" class="form-control" id="l" ng-model="lAmount">
+            </div><br />
+            <div class="col-sm-4 input-group">
+                <span class="lbl label label-default">M</span>
+                <input type="text" class="form-control" id="m" ng-model="mAmount">
+            </div><br />
+            <div class="col-sm-4 input-group">
+                <span class="lbl label label-default">S</span>
+                <input type="text" class="form-control" id="s" ng-model="sAmount">
+            </div><br />
+            <div class="col-sm-4 input-group">
+                <span class="lbl label label-default">XS</span>
+                <input type="text" class="form-control" id="xs" ng-model="xsAmount">
+            </div><br />
+            <div class="col-sm-4 input-group">
+                <span class="lbl label label-default">OS</span>
+                <input type="text" class="form-control" id="os" ng-model="osAmount">
+            </div><br />
+
+            <!--<input type="button" ng-click="uploadFiles()" value="Next" class="btn btn-primary" />-->
+            <button type="button" class="btn btn-primary" ng-click="uploadFiles()">Next</button>
+
+            <!--<button type="button" class="col-sm-2 col-sm-push-12 btn glyphicon glyphicon-ok-circle" ng-click="uploadFiles()">Next</button>-->
+        </div>-->
+          
+        <!--<input type="button" ng-click="uploadFiles()" value="Next" class="btn btn-primary" />-->
+        <button type="button" class="btn btn-primary" ng-click="uploadFiles()">Next</button>
+
+        <!--<button type="button" class="col-sm-2 col-sm-push-12 btn glyphicon glyphicon-ok-circle" ng-click="uploadFiles()">Next</button>-->
+
+    </div>
+
+
+<!--</div>-->

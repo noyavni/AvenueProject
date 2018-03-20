@@ -1,0 +1,80 @@
+﻿<div class="app-shell">  
+
+
+        <div id="page-content-wrapper">
+            <!--Header-->
+            <div class="row content-header">
+                <div class="col col-sm-12">
+                    <nav class="navbar">
+                        <div class="col col-xs-4">
+                            <ul class="nav navbar-nav navbar-left" ng-if="vm.shellProperties.userNavBar">
+                                <li><a ui-sref="root.userPivacy.properties"><span class="glyphicon glyphicon-cog"></span></a></li>
+                                <li><a ui-sref="root.userPivacy.favorites"><span class="glyphicon glyphicon-heart"></span></a></li>
+                                <li><a ui-sref="root.userPivacy.cart"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+                            </ul>
+                        </div>
+                        <div class="col col-xs-4 col-xs-push-1">
+                            <a ui-sref="root.home">A V E N U E</a>
+                        </div>
+                        <div class="pull-right">
+                            <div ng-if="!vm.user || !vm.user.Fname"><a class="btn btn-link" ui-sref="root.login">{{'a-shell.login' | translate }}</a> | <a class="btn btn-link" ui-sref="root.register">{{'a-shell.register' | translate}}</a></div>
+                            <div ng-if="vm.user && vm.user.Fname">{{:: 'a-shell.hello'  | translate }} {{vm.user.Fname}} | <button type="button" class="btn btn-link" ng-click="vm.logOut()"> {{ 'a-shell.logOut' | translate }}</button></div>
+                        </div>
+                    </nav>  
+                    <div class="row">
+                        <nav class="navbar navbar-default">
+                            <ul class="nav navbar-nav col-xs-6">
+                                <li class="col-xs-push-6"><a ui-sref="root.home"><span class="navBarTextStyle">{{:: 'a-shell.new'  | translate }}</span></a></li>
+                                <li class="col-xs-push-7"><a ui-sref="root.info"><span class="navBarTextStyle">{{:: 'a-shell.info' | translate }}</span></a></li>
+                                <li class="col-xs-push-8"><a ui-sref="root.collection.categories"><span class="navBarTextStyle">{{:: 'a-shell.collection' | translate }}</span></a></li>
+                                <li class="col-xs-push-9"><a ui-sref="root.review.reviews"><span class="navBarTextStyle">{{:: 'a-shell.review' | translate }}</span></a></li>
+                                <li class="col-xs-push-10" ng-if="vm.shellProperties.addProduct"><a ui-sref="root.addp"><span class="navBarTextStyle">{{:: 'a-shell.addProd' | translate }}</span></a></li>
+                                <li class="col-xs-push-11" ng-if="vm.shellProperties.orders"><a ui-sref="root.orders"><span class="navBarTextStyle">{{:: 'a-shell.orders' | translate }}</span></a></li>
+                            </ul>
+                        </nav>
+                    </div>  
+                </div>
+               
+
+       
+  
+
+            </div>
+            
+            <!--Content-->
+            <div class="page-content inset" data-spy="scroll" data-target="#spy">
+                <div class="container-fluid">
+                    <ui-view></ui-view>
+                </div>
+            </div>
+                
+            
+      
+            <br /><br /><br /><br /><br /><br /><br />
+            <!--Footer-->
+            <div id="footer" class="row navbar navbar-fixed-bottom">
+                <div class="col-sm-4">
+                    <div class="designersList" ng-repeat="item in vm.designers">
+                        <span class="glyphicon glyphicon-chevron-right">
+                            {{item.DesignName}}
+                        </span>
+                    </div>
+                </div>
+            
+                <div class="rights col-sm-4">
+                    <span>Customer Services</span> <br />
+                    <span>avenue@gmail.com</span> <br />
+                    <span class="glyphicon glyphicon-copyright-mark">
+                        Noy Avni | Orel Drori | Moshe Mahlof
+                    </span>
+                </div>
+                <div class="col-sm-4"></div>
+
+            </div>
+        </div>
+</div>
+<style>
+    html.md-default-theme, html, body.md-default-theme, body {
+     background-color: white; 
+}
+</style>

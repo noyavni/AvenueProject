@@ -1,0 +1,30 @@
+﻿<div class="app-review" ng-controller="appReviewController as vm">
+
+    <div class="row" >
+        <input type="button" ng-click="vm.goToAdd()" value="{{ 'a-review.addRev' | translate }}" ng-if="vm.shellProperties.addreview" class="btn btn-primary" />
+    </div>
+
+<br />
+    <div class="row" ng-repeat="item in vm.revInfo">
+        <br />
+        <div class="revList col-sm-10 col-sm-push-1">
+            <div>
+                <span class="pull-right">
+                    {{item.RevDate}}
+                </span>
+
+                <span ng-repeat="i in item.revStars">
+                    <span class="star glyphicon glyphicon-star"></span>
+                </span>
+                
+                <span class="name">{{item.UserName}}</span> &nbsp;
+
+                <br />
+                <span class="revInf pull-left" >{{item.RevText}}</span>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    
+

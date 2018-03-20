@@ -1,0 +1,56 @@
+﻿<div ng-cloak class="app-orders" ng-app="app-orders" ng-controller="appOrdersController as vm">
+
+
+    <!--table-->
+    <div class="row a-underline">
+        <div class="col-sm-12"><h2 class="bold">Orders</h2></div>
+    </div>
+    <md-divider></md-divider>
+    &nbsp&nbsp
+    <div class="table table-hover">
+        <div class="primaryHeadline row">
+            <div class="bold col-sm-3">{{'a-orders.ID' | translate }}</div>
+            <div class="bold col-sm-3">{{'a-orders.username' | translate }}</div>
+            <div class="bold col-sm-3">{{'a-orders.date' | translate }}</div>
+            <div class="bold col-sm-3">{{'a-orders.totalprice' | translate }}</div>
+        </div>
+
+        <div ng-repeat="item in vm.ordersHistoryObj">
+            <div class="row">
+                <div class="col-sm-3">
+                    <!--<div>
+                        <span class="glyphicon glyphicon-minus" ng-click="!vm.rowClicked($index)"></span>
+                        {{item.OrderNum}}
+                    </div>-->
+                    <div ng-click="vm.rowClicked($index)" class="bold glyphicon" ng-class="vm.showDiv === $index ? 'glyphicon-minus': 'glyphicon-plus'">
+                        {{item.OrderNum}}
+                    </div>
+                    <div ng-if="vm.showDiv === $index"></div>
+
+                </div>
+                <div class="bold col-sm-3">{{item.UserName}}</div>
+                <div class="bold col-sm-3">{{item.OrderDate}}</div>
+                <div class="bold col-sm-3">{{item.TotalPrice}}</div>
+            </div>
+
+            <md-divider></md-divider>
+
+            <div ng-show="vm.showDiv === $index">
+                <div class="table table-inverse">
+                    <div class="inTbl row">
+                        <div class="col-sm-4">{{'a-orders.itemName' | translate }}</div>
+                        <div class="col-sm-4">{{'a-orders.designer' | translate }}</div>
+                        <div class="col-sm-4">{{'a-orders.price' | translate }}</div>
+                    </div>
+                    <div class="detailTbl row" ng-repeat="innerItem in item.items">
+                        <div class="col-sm-4">{{innerItem.ProdName}}</div>
+                        <div class="col-sm-4">{{innerItem.DesignName}}</div>
+                        <div class="col-sm-4">{{innerItem.Price}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>

@@ -1,0 +1,56 @@
+﻿<div ng-cloak class="app-user-privacy" ng-app="app-user-privacy" ng-controller="favoritesController as vm">
+    <div layout-padding style="color:black">
+        <div>
+            <span class="fcart">Your Likes :</span>
+        </div>
+        <md-divider></md-divider>
+        <br /><br />
+        <div class="fcart row">
+            <span class="col-sm-2">Image</span>
+            <span class="col-sm-2">Product Name</span>
+            <span class="col-sm-2">Price</span>
+            <span class="col-sm-2">Match</span>
+            <span class="col-sm-2">Remove Item</span>
+            <span class="col-sm-2">Add To Cart</span>
+        </div>
+        <md-divider></md-divider>
+        <br />
+
+        <div layout-padding class="fcart row" ng-repeat="t in vm.prodList">
+            <div>
+                <span class="col-sm-2">
+                    <img src="{{t.image[0]}}" style="width:100px; height:120px">
+                </span>
+                <md-divider></md-divider><br /><br /><br />
+                <span class="col-sm-2">
+                    {{t.prodName}}
+                </span>
+                <span class="col-sm-2">
+                    {{t.price}} $
+                </span>
+                <span class="col-sm-2">
+                    <md-icon class="circleIcon" md-svg-icon={{t.match}}></md-icon>
+                </span>
+                <span class="col-sm-2">
+                    <md-button class="md-icon-button" ng-click="deleteItem(t)">
+                        <md-icon md-svg-icon="./assets/img/ic_delete_black_48px.svg"></md-icon>
+                    </md-button>
+                </span>
+                <span class="col-sm-2">
+                    <md-button class="md-icon-button" ng-click="addToCart(t,$event)">
+                        <md-icon md-svg-icon="./assets/img/ic_add_shopping_cart_black_48px.svg"></md-icon>
+                    </md-button>
+                </span>
+            </div>
+            <br />
+
+        </div>
+    </div>
+</div>
+<style>
+    .fcart
+    {
+     font-weight:bold;
+     font-size:20px;   
+    }
+</style>

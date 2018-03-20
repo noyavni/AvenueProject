@@ -1,0 +1,59 @@
+﻿<div class="app-addp" ng-controller="appAddPController as vm">
+
+    <div class="row">   
+        <div class="col-sm-5">
+
+            <!--Insert Pic-->
+            <div class="col-sm-4 input-group">
+                <span class="lbl label label-default">{{:: 'a-addp.pics'  | translate }}</span><br />
+                <input type="file" class="file" onchange="angular.element(this).scope().getTheFiles(this.files)" multiple accept=".jpeg,.png,.jpg,.bmp"/>
+            </div>
+            <br />
+
+            <!--Insert Price-->
+            <div class="col-sm-4 input-group">
+                <span class="lbl label label-default">{{:: 'a-addp.price'  | translate }}</span>
+                <input type="text" class="form-control" id="price" ng-model="vm.Price" ng-pattern="/[1-9]^[0-9]{1,7}$/">
+            </div>
+            <br />
+
+            <!--Insert Product Shape-->
+            <div class="col-sm-4 input-group">
+                <span class="lbl label label-default">{{:: 'a-addp.pShape'  | translate }}</span>
+                <select class="form-control" id="sel1" ng-model="vm.ProductShape">
+                    <option ng-repeat="s in vm.list2">{{s}}</option>
+                </select>
+            </div>
+            <br />
+
+            <!--Insert Product Name-->
+            <div class="col-sm-4 input-group">
+                <span class="lbl label label-default">{{:: 'a-addp.pName'  | translate }}</span>
+                <input type="text" class="form-control" id="prdname" ng-model="vm.ProductName">
+            </div>
+            <br />
+
+            <!--Insert Product Type-->
+            <div class="col-sm-4 input-group">
+                <span class="lbl label label-default">{{:: 'a-addp.cat'  | translate }}</span>
+                <select class="form-control" id="sel2" ng-model="vm.ProductType">
+                    <option ng-repeat="t in vm.list">{{t}}</option>
+                </select>
+            </div>
+            <br />
+
+            <!--Insert Designer Name-->
+            <div class="col-sm-4 input-group">
+                <span class="lbl label label-default">{{:: 'a-addp.designer'  | translate }}</span>
+                <select class="form-control" id="sel2" ng-model="vm.Designer">
+                    <option ng-repeat="d in vm.list3">{{d}}</option>
+                </select>
+            </div>
+            <br /><br /><br />
+
+            <!--Upload-->
+            <input type="button" ng-click="uploadFiles($event)" value="{{:: 'a-addp.next'  | translate }}" class="col-sm-3 btn btn-primary" />
+        </div>
+     
+    </div>
+</div>

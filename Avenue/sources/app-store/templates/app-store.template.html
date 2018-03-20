@@ -1,0 +1,65 @@
+﻿<div ng-cloak class="app-store" ng-app="app-store" ng-controller="appStoreController as vm">
+    <div class="row">
+        <div ng-repeat="item in vm.prodList track by $index" style="width:400px; height:500px; margin:8px 8px 150px 8px" class="col-xs-10">
+            <md-card class="image col-sm-4 col-sm-push-1">
+
+                <div id="myCarousel{{$index}}" class="carousel slide" data-ride="carousel" ng-class="{{$index}}" ng-init="z=$index">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators" ng-show="{{item.image.length}} > 1">
+                        <li data-target="#myCarousel{{z}}" data-slide-to="{{$index}}" ng-repeat="i in item.image"></li>
+                    </ol>
+                    
+                
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="{{item.image[0]}}" style="width:400px; height:500px">
+                        </div>
+                        <div ng-repeat="img in item.image.slice(1,item.image.length)" class="item">
+                            <img src="{{img}}" style="width:400px; height:500px">
+                        </div>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <!--<a class="left carousel-control" href="#myCarousel{{z}}" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel{{z}}" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>-->
+                </div>
+
+                <md-card-title>
+                    <md-card-title-text class="center-block">
+                        <span class="md-headline">{{item.prodName}}</span>
+                        <span class="md-headline pull-right">
+                            {{item.price}} $
+                        </span>
+                    </md-card-title-text>
+
+                </md-card-title>
+                <md-divider></md-divider>
+                <md-card-actions layout="row" layout-align="end center" class="center-block">
+                    <md-button class="md-icon-button" ng-click="addLike(item,$event)">
+                        <md-icon md-svg-icon="./assets/img/ic_favorite_black_48px.svg"></md-icon>
+                    </md-button>
+                    <md-button class="md-icon-button" ng-click="addToCart(item,$event)">
+                        <md-icon md-svg-icon="./assets/img/ic_add_shopping_cart_black_48px.svg"></md-icon>
+                    </md-button>
+                        <md-icon class="circleIcon" md-svg-icon={{item.match}}></md-icon>
+                </md-card-actions>
+            </md-card>
+
+        </div>
+    </div>
+        
+
+        
+       
+  
+
+
+</div>

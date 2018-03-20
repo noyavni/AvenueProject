@@ -1,0 +1,23 @@
+﻿<div class="app-collection" ng-app="app-collection" ng-controller="appCollectionController as vm">
+
+
+    <div class="form-group row">
+        <div >
+            <input type="button" ng-if="vm.shellProperties.addNewCategory" ng-click="vm.goToAddCategory()" value="Add Collection" class="btn btn-primary" />
+        </div>
+    </div>
+
+    <div ng-repeat="item in vm.list">
+        <md-card class="categories col-sm-4 col-sm-push-1">
+            <img src="{{item.image[1]}}" class="md-card-image" alt="" image caption">
+            <md-card-actions layout="row" layout-align="end center" class="center-block">
+                <md-button ng-click="vm.navigate(item.image[0])">{{item.image[0]}}</md-button>
+            </md-card-actions>
+        </md-card>
+    </div>
+
+     <br />
+
+
+
+</div>

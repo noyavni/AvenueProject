@@ -1,0 +1,158 @@
+﻿<div class="app-user-privacy">
+    <div class="row a-underline">
+        <div class="col-sm-12"> {{'a-user-privacy.properties.myaccount' | translate }} </div>
+    </div>
+    
+
+    <!--user details-->
+    <div class="row">
+        <div class="userDetails col-sm-6">
+            <div class="a-underline"> 
+                {{'a-user-privacy.properties.userDetails' | translate }}
+                <span class="pull-right">
+                    <input type="button" class="btn btn-primary" ng-click="bShapeChange = true" value="Edit" style="height: 26px">
+                </span>
+            </div>
+            <div>
+                <span class="bold">{{'a-user-privacy.properties.name' | translate }}:</span>
+                <span>{{vm.user.Fname}}</span>
+                <span>{{vm.user.Lname}}</span> 
+            </div>
+            <div>
+                <span class="bold"> {{'a-user-privacy.properties.email' | translate }}: </span>
+                <span> {{vm.user.UserName}}</span>
+            </div>
+            <div>
+                <span class="bold"> {{'a-user-privacy.properties.Bshape' | translate }}: </span>
+                <span ng-disabled="bShapeChange"> {{vm.user.UserBodyShape}}</span> 
+            </div>
+
+            <br />
+            <div ng-if="bShapeChange">
+                <div class="col-sm-2">
+                    <input type="text" class="form-control" name="contactnum2" placeholder="{{'a-register.chest' | translate}}" ng-model="vm.changeObj.bust" value="">
+                </div>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control" name="contactnum2" placeholder="{{'a-register.waist' | translate}}" ng-model="vm.changeObj.waist" value="">
+                </div>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control" name="contactnum2" placeholder="{{'a-register.hips' | translate}}" ng-model="vm.changeObj.hips" value="">
+                </div>
+                <div class="col-sm-3">
+                    <input type="text" class="form-control" name="contactnum2" placeholder="{{'a-register.shoulders' | translate}}" ng-model="vm.changeObj.shoulders" value="">
+                </div>
+                <br /><br />
+                <input type="button" class="btn btn-primary pull-right" ng-click="vm.updateBodyShape()" value="Update">
+
+            </div>
+
+
+        </div>
+
+
+        <div class="delivery col-sm-6">
+            <div class="a-underline"> 
+                {{'a-user-privacy.properties.deliveryTo.title' | translate }} 
+                <span class="pull-right">
+                    <input type="button" class="btn btn-primary" ng-click="userDetailsChange = true" value="Edit" style="height: 26px">
+                </span>
+            </div> 
+            <div>
+                <div ng-init="userDetailsChange = false">
+                    <span class="bold"> {{'a-user-privacy.properties.deliveryTo.name' | translate }}: </span>
+                    <input type="text" ng-if="userDetailsChange" value="{{vm.user.Street}}" ng-model="vm.addressObj.street" />
+                    <span ng-if="!userDetailsChange">{{vm.user.Street}}</span>
+                </div>
+                <div>
+                    <span class="bold"> {{'a-user-privacy.properties.deliveryTo.city' | translate }}: </span>
+                    <input type="text" ng-if="userDetailsChange" value="{{vm.user.City}}" ng-model="vm.addressObj.city"/>
+                    <span ng-if="!userDetailsChange">{{vm.user.City}}</span>
+                </div>
+                <div>
+                    <span class="bold"> {{'a-user-privacy.properties.deliveryTo.postcode' | translate }}: </span>
+                    <input type="text" ng-if="userDetailsChange" value="{{vm.user.PostCode}}" ng-model="vm.addressObj.postcode"/>
+                    <span ng-if="!userDetailsChange">{{vm.user.PostCode}}</span>
+                </div>
+                <div>
+                    <span class="bold"> {{'a-user-privacy.properties.phone' | translate }}: </span> 
+                    <input type="text" ng-if="userDetailsChange" value="{{vm.user.Phone}}" ng-model="vm.addressObj.phone"/>
+                    <span ng-if="!userDetailsChange">{{vm.user.Phone}}</span>
+                </div>
+                <input type="button" ng-if="userDetailsChange" class="btn btn-primary pull-right" ng-click="vm.updateUserAddress()" value="Update">
+            </div>
+
+        
+
+          
+            <!--<div ng-if="userDetailsChange">
+                <div class="col-sm-2">
+                    <input type="text" class="form-control" name="contactnum2" placeholder="{{'a-register.chest' | translate}}" ng-model="vm.userObj.bust" value="">
+                </div>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control" name="contactnum2" placeholder="{{'a-register.waist' | translate}}" ng-model="vm.userObj.waist" value="">
+                </div>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control" name="contactnum2" placeholder="{{'a-register.hips' | translate}}" ng-model="vm.userObj.hips" value="">
+                </div>
+                <div class="col-sm-3">
+                    <input type="text" class="form-control" name="contactnum2" placeholder="{{'a-register.shoulders' | translate}}" ng-model="vm.userObj.shoulders" value="">
+                </div>
+                <br /><br />
+                <input type="button" class="btn btn-primary pull-right" ng-click="vm.updateUserDetails()" value="Update">
+
+            </div>-->
+
+        </div>
+
+    </div>
+    &nbsp&nbsp
+
+    <!--table-->
+    <div class="row a-underline">
+        <div class="col-sm-12"> {{'a-user-privacy.properties.myorders' | translate }} </div>
+    </div>
+    &nbsp&nbsp
+    <div class="table table-hover">
+        <div class="primaryHeadline row" >
+            <div class="col-sm-3">{{'a-user-privacy.properties.ID' | translate }}</div>
+            <div class="col-sm-3">{{'a-user-privacy.properties.date' | translate }}</div>
+            <div class="col-sm-3">{{'a-user-privacy.properties.totalprice' | translate }}</div>
+        </div>
+
+        <div ng-repeat="item in vm.ordersHistoryObj">
+            <div class="row">
+                <div class="col-sm-3">
+                    <!--<div>
+                        <span class="glyphicon glyphicon-minus" ng-click="!vm.rowClicked($index)"></span>
+                        {{item.OrderNum}}
+                    </div>-->
+                    <div ng-click="vm.rowClicked($index)" class="bold glyphicon" ng-class="vm.showDiv === $index ? 'glyphicon-minus': 'glyphicon-plus'">
+                        {{item.OrderNum}}
+                    </div>
+                    <div ng-if="vm.showDiv === $index"></div>
+
+                </div>
+                <div class="bold col-sm-3">{{item.OrderDate}}</div>
+                <div class="bold col-sm-3">{{item.TotalPrice}}</div>
+            </div>
+
+            <md-divider></md-divider>
+
+            <div ng-show="vm.showDiv === $index">
+                <div class="table table-inverse">
+                    <div class="inTbl row">
+                        <div class="col-sm-4">{{'a-user-privacy.properties.itemName' | translate }}</div>
+                        <div class="col-sm-4">{{'a-user-privacy.properties.designer' | translate }}</div>
+                        <div class="col-sm-4">{{'a-user-privacy.properties.price' | translate }}</div>
+                    </div>
+                    <div class="detailTbl row" ng-repeat="innerItem in item.items">
+                        <div class="col-sm-4">{{innerItem.ProdName}}</div>
+                        <div class="col-sm-4">{{innerItem.DesignName}}</div>
+                        <div class="col-sm-4">{{innerItem.Price}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
